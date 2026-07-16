@@ -13,6 +13,14 @@
 - Desktop entry、安全扫描和 Debian Build-Depends 检查通过；
 - 凭据特征扫描未发现 GitHub token、云密钥、私钥或敏感文件。
 
+## GitHub Actions
+
+- 首次公开 CI 运行：`29465626580`；
+- `Quality (ubuntu-22.04)`：通过；
+- `Quality (ubuntu-24.04)`：通过；
+- `Debian package` 构建与 Lintian：通过；
+- 运行地址：https://github.com/kugaichen/passport-unlocker-linux/actions/runs/29465626580
+
 ## Ubuntu 22.04 WSL
 
 - Python 3.10.12、pyudev 0.22、GTK 4.6、Libadwaita 1.1；

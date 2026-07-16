@@ -4,7 +4,7 @@
 
 ## 当前结论
 
-项目已达到“可以公开源代码并接受审查”的 pre-alpha 阶段，但尚未达到“向普通用户发布稳定解锁工具”的阶段。
+项目已在 https://github.com/kugaichen/passport-unlocker-linux 公开，当前为可接受代码审查和软件测试的 pre-alpha 阶段，但尚未达到“向普通用户发布稳定解锁工具”的阶段。
 
 可以公开的内容包括：源码、单元测试、协议分析、安全模型、clean-room SG_IO 说明、Debian 打包文件和明确的未验证声明。
 
@@ -22,15 +22,18 @@
 - `io.github.kugaichen.PassportUnlocker` 应用 ID、真实项目 URL 和匿名维护邮箱；
 - CLI、GUI 和 helper 手册页；
 - 本地 `main` Git 仓库与可审查的首次提交暂存区；
+- GitHub Public 仓库、Issues、Topics 与 Private vulnerability reporting；
+- 首次 GitHub Actions：Ubuntu 22.04/24.04 质量任务和 Debian 包任务全部通过；
 - 凭据特征扫描未发现 Token、私钥或敏感文件。
 
-## 公开仓库前必须完成
+## 公开仓库状态
 
-1. 完成 GitHub CLI 设备授权；
-2. 创建 `kugaichen/passport-unlocker-linux` Public 仓库并推送首次提交；
-3. 启用 GitHub Private vulnerability reporting；
-4. 确认 GitHub Actions 的 Ubuntu 22.04/24.04 工作流通过；
-5. 复核公开后的 README、Issue 模板、Security 页面和仓库 Topics。
+- 仓库：`kugaichen/passport-unlocker-linux`；
+- 可见性：Public；
+- 默认分支：`main`；
+- 首次提交：`230a509bfa2f9497c687770b94a7616b5c2f8b48`；
+- 首次 CI：运行 `29465626580`，结论 `success`；
+- 二进制 Release：未创建，等待真实硬件验证。
 
 ## 稳定发布前必须完成
 

@@ -8,6 +8,7 @@
 - Added GitHub CI, contribution guidance, security/community templates and release gates.
 - Adopted the `io.github.kugaichen.PassportUnlocker` application identity and public project URLs.
 - Added manual pages for the CLI, GUI and privileged helper.
+- Published the initial public repository with private vulnerability reporting and passing GitHub CI.
 - Improved GUI smoke tests so Python tracebacks cannot be reported as successful timeouts.
 - Hardware status, unlock and rescan remain unverified in the new implementation.
 

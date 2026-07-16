@@ -1,5 +1,7 @@
 # Passport Unlocker for Linux
 
+[![CI](https://github.com/kugaichen/passport-unlocker-linux/actions/workflows/ci.yml/badge.svg)](https://github.com/kugaichen/passport-unlocker-linux/actions/workflows/ci.yml)
+
 Passport Unlocker for Linux 是一个非官方开源工具，用于在 Linux 上解锁兼容的、启用硬件加密的 WD My Passport 硬盘。
 
 它不会破解或绕过密码；用户仍须输入正确的硬盘密码。应用向硬盘控制器发送兼容的认证请求，成功后重新查询状态并重新扫描设备，让桌面环境识别数据分区。
