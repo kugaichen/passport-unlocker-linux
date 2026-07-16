@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Quality (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-22.04
+          - ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            appstream \
+            build-essential \
+            debhelper \
+            desktop-file-utils \
+            dh-python \
+            gir1.2-adw-1 \
+            gir1.2-gtk-4.0 \
+            mypy \
+            pybuild-plugin-pyproject \
+            python3-all \
+            python3-build \
+            python3-gi \
+            python3-pytest \
+            python3-pyudev \
+            python3-setuptools \
+            python3-venv \
+            python3-wheel
+
+      - name: Install isolated Ruff
+        run: |
+          python3 -m venv "$HOME/.cache/passport-unlocker-tools"
+          "$HOME/.cache/passport-unlocker-tools/bin/python" -m pip install \
+            --disable-pip-version-check "ruff==0.15.21"
+
+      - name: Run Phase 1
+        run: sh scripts/wsl-test-phase1.sh
+
+      - name: Run Phase 2
+        run: sh scripts/wsl-test-phase2.sh
+
+  package:
+    name: Debian package
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Install package tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            debhelper \
+            dh-python \
+            lintian \
+            pybuild-plugin-pyproject \
+            python3-all \
+            python3-build \
+            python3-setuptools \
+            python3-wheel
+
+      - name: Build binary package
+        run: sh scripts/build-deb.sh
+
+      - name: Run Lintian
+        run: lintian --fail-on error ../passport-unlocker_0.1.0-1_all.deb

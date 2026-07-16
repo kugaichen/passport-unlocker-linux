@@ -1,0 +1,15 @@
+Source: passport-unlocker
+Section: utils
+Priority: optional
+Maintainer: kugaichen <kugaichen@users.noreply.github.com>
+Homepage: https://github.com/kugaichen/passport-unlocker-linux
+Build-Depends: debhelper-compat (= 13), dh-python, pybuild-plugin-pyproject, python3-all, python3-setuptools
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: passport-unlocker
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-gi, python3-pyudev, gir1.2-gtk-4.0, gir1.2-adw-1, pkexec, polkitd
+Description: unofficial unlocker for compatible WD My Passport drives
+ A GTK desktop application and restricted privileged helper for unlocking
+ compatible hardware-encrypted external drives with the correct password.

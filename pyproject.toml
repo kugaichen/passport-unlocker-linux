@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=59.6", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = ["legacy"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+# Both modules execute fixed absolute paths with argv lists and never use a shell.
+"src/passport_unlocker/cli/main.py" = ["S603"]
+"src/passport_unlocker/gui/runner.py" = ["S603"]
+
+[[tool.mypy.overrides]]
+module = "pyudev"
+ignore_missing_imports = true

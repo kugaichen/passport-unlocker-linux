@@ -1,0 +1,27 @@
+.TH PASSPORT-UNLOCKER-GUI 1 "July 2026" "passport-unlocker 0.1.0" "User Commands"
+.SH NAME
+passport-unlocker-gui \- graphical unlocker for compatible WD My Passport drives
+.SH SYNOPSIS
+.B passport-unlocker-gui
+.RI [ --monitor ]
+.SH DESCRIPTION
+.B passport-unlocker-gui
+starts the GTK 4 and Libadwaita desktop interface. It discovers candidate
+devices, accepts a drive password, and requests the restricted privileged
+helper through Polkit.
+.PP
+Run the GUI as the desktop user, not with
+.BR sudo (8).
+.SH OPTIONS
+.TP
+.B --monitor
+Remain in the user session as the XDG autostart monitor and present the window
+when a candidate device is detected.
+.SH SECURITY
+Passwords are not saved. The password field is cleared after an operation.
+The application is unofficial and is not affiliated with or endorsed by
+Western Digital.
+.SH SEE ALSO
+.BR passport-unlocker (1),
+.BR pkexec (1)
+

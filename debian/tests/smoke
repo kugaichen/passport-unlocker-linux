@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+passport-unlocker --version
+passport-unlocker list
+
+
+

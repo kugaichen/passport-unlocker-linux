@@ -1,0 +1,26 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Passport Unlocker for Linux
+Upstream-Contact: kugaichen <kugaichen@users.noreply.github.com>
+Source: https://github.com/kugaichen/passport-unlocker-linux
+Comment: Protocol behavior is derived from wdpassport-utils commit
+ 4317baece37fa9c41070d790427c03f0a782a6ad.
+
+Files: *
+Copyright: 2026 Passport Unlocker contributors
+License: GPL-2.0-only
+
+Files: legacy/*
+Copyright: 0-duke, crypto-universe, JoshData
+License: GPL-2.0-only
+
+License: GPL-2.0-only
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the Free
+ Software Foundation; version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in "/usr/share/common-licenses/GPL-2".

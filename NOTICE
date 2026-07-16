@@ -1,0 +1,10 @@
+Passport Unlocker for Linux includes behavior derived from wdpassport-utils.
+
+Upstream project: https://github.com/0-duke/wdpassport-utils
+Recorded upstream commit: 4317baece37fa9c41070d790427c03f0a782a6ad
+Upstream authors credited by setup.py: 0-duke, crypto-universe, JoshData
+License: GNU General Public License version 2
+
+This derivative was reorganized and extended in 2026. It is unofficial and is
+not affiliated with or endorsed by Western Digital.
+

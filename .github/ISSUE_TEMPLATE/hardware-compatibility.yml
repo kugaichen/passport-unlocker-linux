@@ -1,0 +1,62 @@
+name: Hardware compatibility report
+description: Submit sanitized results for a specific compatible-drive candidate
+title: "[Hardware]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never publish a drive password, full serial number, derived hash, or raw unlock payload. Test only with independently backed-up data.
+  - type: input
+    id: model
+    attributes:
+      label: Exact model shown by Linux
+      placeholder: WD My Passport 2626
+    validations:
+      required: true
+  - type: input
+    id: vidpid
+    attributes:
+      label: USB VID:PID
+      placeholder: 1058:2626
+    validations:
+      required: true
+  - type: input
+    id: serial_suffix
+    attributes:
+      label: Serial suffix only
+      placeholder: Last four characters
+  - type: input
+    id: environment
+    attributes:
+      label: Linux and desktop environment
+      placeholder: Ubuntu 24.04, GNOME, Wayland
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Furthest verified stage
+      options:
+        - Candidate discovery only
+        - Read-only status query
+        - Correct-password unlock and post-write verification
+        - Rescan and partition rediscovery
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Sanitized observations
+      description: Describe errors without raw SCSI payloads or complete serial numbers.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: The test data had an independent backup.
+          required: true
+        - label: I did not use erase, reset-key, password-change, formatting, or partition commands.
+          required: true
+        - label: This report contains no password, full serial number, hash, or raw unlock payload.
+          required: true

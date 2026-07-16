@@ -1,0 +1,2 @@
+"""Privileged one-shot helper."""
+

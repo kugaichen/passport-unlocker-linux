@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible application, packaging, or desktop integration problem
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include a drive password, password hash, full serial number, raw unlock payload, token, or private key. Security vulnerabilities belong in GitHub private vulnerability reporting.
+  - type: input
+    id: version
+    attributes:
+      label: Application version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: distro
+    attributes:
+      label: Linux distribution
+      placeholder: Ubuntu 24.04
+    validations:
+      required: true
+  - type: input
+    id: desktop
+    attributes:
+      label: Desktop and display session
+      placeholder: GNOME 46, Wayland
+  - type: input
+    id: device
+    attributes:
+      label: Drive model and VID:PID
+      description: Include only the last four serial characters if necessary.
+      placeholder: WD My Passport 2626, 1058:2626, serial …1234
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Do not perform erase, key reset, password change, formatting, or partition operations.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and sanitized logs
+      description: Remove passwords, hashes, full serials, paths containing personal data, and raw payloads.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I removed passwords, hashes, complete serial numbers, tokens, and private keys.
+          required: true
+        - label: I did not run a destructive disk operation while reproducing this issue.
+          required: true

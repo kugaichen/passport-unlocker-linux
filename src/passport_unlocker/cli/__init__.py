@@ -1,0 +1,2 @@
+"""Safe command-line interface."""
+

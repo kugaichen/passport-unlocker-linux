@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Passport Unlocker Monitor
+Comment=Detect compatible encrypted drives
+Exec=passport-unlocker-gui --monitor
+Icon=io.github.kugaichen.PassportUnlocker
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

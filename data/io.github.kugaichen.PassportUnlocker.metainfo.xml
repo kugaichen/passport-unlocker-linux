@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.kugaichen.PassportUnlocker</id>
+  <name>Passport Unlocker</name>
+  <summary>Unlock compatible hardware-encrypted external drives</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0-only</project_license>
+  <developer id="io.github.kugaichen">
+    <name>Passport Unlocker contributors</name>
+  </developer>
+  <description>
+    <p>An unofficial Linux utility that unlocks compatible WD My Passport drives using the correct drive password.</p>
+    <p>It is not affiliated with or endorsed by Western Digital.</p>
+  </description>
+  <url type="homepage">https://github.com/kugaichen/passport-unlocker-linux</url>
+  <url type="bugtracker">https://github.com/kugaichen/passport-unlocker-linux/issues</url>
+  <launchable type="desktop-id">io.github.kugaichen.PassportUnlocker.desktop</launchable>
+  <content_rating type="oars-1.1"/>
+  <releases><release version="0.1.0" date="2026-07-15"/></releases>
+</component>

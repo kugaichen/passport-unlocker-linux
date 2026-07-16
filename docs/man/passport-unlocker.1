@@ -1,0 +1,55 @@
+.TH PASSPORT-UNLOCKER 1 "July 2026" "passport-unlocker 0.1.0" "User Commands"
+.SH NAME
+passport-unlocker \- list, inspect, and unlock compatible WD My Passport drives
+.SH SYNOPSIS
+.B passport-unlocker
+.B list
+.br
+.B passport-unlocker
+.B status
+.BI --device-id " STABLE_ID"
+.br
+.B passport-unlocker
+.B unlock
+.BI --device-id " STABLE_ID"
+.br
+.B passport-unlocker
+.B --version
+.SH DESCRIPTION
+.B passport-unlocker
+is the command-line interface for Passport Unlocker for Linux.
+It discovers candidate USB drives and delegates privileged status or unlock
+operations to a restricted helper through Polkit.
+.PP
+The application is unofficial and is not affiliated with or endorsed by
+Western Digital.
+.SH COMMANDS
+.TP
+.B list
+List candidate devices and their stable identifiers.
+.TP
+.B status
+Query the security state of the selected device.
+.TP
+.B unlock
+Read the drive password without terminal echo, unlock the selected device,
+verify its state, and request a device rescan.
+.SH OPTIONS
+.TP
+.BI --device-id " STABLE_ID"
+Select the stable identifier printed by
+.BR passport-unlocker " list".
+.TP
+.B --version
+Print the program version.
+.SH SECURITY
+The drive password is read interactively and passed to the privileged helper
+over standard input. Do not provide it in command-line arguments, environment
+variables, files, or logs.
+.PP
+This pre-alpha version has not completed real-drive validation. Back up
+important data before controlled hardware testing.
+.SH SEE ALSO
+.BR passport-unlocker-gui (1),
+.BR pkexec (1)
+

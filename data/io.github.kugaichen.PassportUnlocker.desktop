@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Passport Unlocker
+Comment=Unlock compatible WD My Passport drives
+Exec=passport-unlocker-gui
+Icon=io.github.kugaichen.PassportUnlocker
+Categories=Utility;
+Keywords=WD;Passport;Drive;Encryption;Unlock;USB;
+Terminal=false
+StartupNotify=true

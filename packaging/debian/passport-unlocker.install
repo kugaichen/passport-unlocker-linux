@@ -1,0 +1,8 @@
+data/io.github.kugaichen.PassportUnlocker.desktop usr/share/applications
+data/io.github.kugaichen.PassportUnlocker.metainfo.xml usr/share/metainfo
+data/io.github.kugaichen.PassportUnlocker.svg usr/share/icons/hicolor/scalable/apps
+data/io.github.kugaichen.PassportUnlocker.policy usr/share/polkit-1/actions
+data/autostart/io.github.kugaichen.PassportUnlocker.Monitor.desktop etc/xdg/autostart
+docs/man/passport-unlocker.1 usr/share/man/man1
+docs/man/passport-unlocker-gui.1 usr/share/man/man1
+docs/man/passport-unlocker-helper.8 usr/share/man/man8
